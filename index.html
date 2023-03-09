@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>添加微信</title>
+		<script type="text/javascript">
+			function copyText() {
+				var text = document.getElementById("text").innerText;
+				var input = document.getElementById("input");
+				input.value = text; // 修改文本框的内容
+				input.select(); // 选中文本
+				document.execCommand("copy"); // 执行浏览器复制命令
+				alert("复制成功");
+			}
+		</script>
+		<style type="text/css">
+			.wrapper {
+				position: relative;
+			}
+
+			#input {
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				z-index: -10;
+			}	
+					
+			.align{
+				text-align: center;
+				font-size: 58px;
+				font-weight: 800;
+				line-height: 45px;
+			}
+			
+			#pdd{
+				font-weight: 1000;
+				font-size: 80px;
+				color: red;
+			}
+			
+			button{
+				
+				border: 2px solid dimgrey;
+				
+				box-shadow: 3px 6px 8px dimgrey ,4px 8px 6px dimgrey inset;
+				border:2px solid;
+				border-radius:25px;
+			}
+		</style>
+	</head>
+	<body bgcolor="white">
+		<div class="align">
+			<p>截屏或长按二维码保存图片</p>
+			<p>扫码加微信</p>
+			<p id="pdd">请不要在拼多多发消息</p>
+			<p>扫码加微信，申请秒通过</p>
+			<img src="img/1.jpg" height="750px" width="650px" />
+			<p>加V信后啥图都可以做了，万物皆可P</p>
+			<div class="wrapper">	
+				<p id="text">Zy13707241463</p>
+				<textarea id="input">这是幕后黑手</textarea>
+				<button onclick="copyText()"><p class="align">点击复制微信号</p></button>
+			</div>
+		</div>
+	</body>
+</html>
